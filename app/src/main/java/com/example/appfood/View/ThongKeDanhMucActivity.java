@@ -166,8 +166,14 @@ public class ThongKeDanhMucActivity extends AppCompatActivity implements SanPham
 
     @Override
     public void OnEmptyList() {
-        Toast.makeText(this, "Không tìm thấy sản phẩm nào trong danh mục : " + spinerthongke.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Không tìm thấy sản phẩm nào trong danh mục : " + spinerthongke.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Không tìm thấy sản phẩm", Toast.LENGTH_SHORT).show();
     }
+
+//    @Override
+//    public void OnEmptyList(String msg) {
+//        Toast.makeText(this, "Không tìm thấy sản phẩm nào là: " + msg, Toast.LENGTH_SHORT).show();
+//    }
 
     @Override
     public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String hansudung, Long type, String trongluong) {

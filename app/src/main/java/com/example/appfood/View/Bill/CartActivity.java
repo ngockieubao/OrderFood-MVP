@@ -50,7 +50,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
     private GioHangPreSenter gioHangPreSenter;
     private ArrayList<SanPhamModels> arrayList;
     private Button btnthanhtoan;
-    private  String s[]={"Thanh toán khi nhận hàng","Thanh toán MOMO"};
+    private  String s[]={"Thanh toán khi nhận hàng"};
     private  long tongtien = 0;
     private ProgressBar progressBar;
     private  String hoten="",diachi="",sdt="";

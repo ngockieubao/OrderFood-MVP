@@ -6,6 +6,8 @@ public interface SanPhamView {
 
     void OnEmptyList();
 
+//    void OnEmptyList(String msg);
+
     void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String hansudung, Long type, String trongluong);
 
     void getDataSanPhamTU(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String hansudung, Long type, String trongluong);

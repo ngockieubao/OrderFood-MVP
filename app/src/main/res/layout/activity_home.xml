@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_search_24"
                 android:drawablePadding="10dp"
-                android:hint="Mời bạn nhập món"
+                android:hint="Từ khóa: Cháo và Súp, Lẩu, Pizza, Sandwich,..."
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:singleLine="true"

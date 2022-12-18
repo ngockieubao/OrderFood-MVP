@@ -49,6 +49,11 @@ public class ProductActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
 
+//            @Override
+//            public void OnEmptyList(String msg) {
+//
+//            }
+
             @Override
             public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String trongluong) {
                 arr_sp.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));

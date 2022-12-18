@@ -1,15 +1,20 @@
 package com.example.appfood.Model;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.example.appfood.Presenter.ISanPham;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class SanPhamModels implements Serializable {
     private String id;
@@ -353,19 +358,18 @@ public class SanPhamModels implements Serializable {
         this.hansudung = hansudung;
     }
 
-    public void HandlegetDataSanPham(String loaisp, int type) {
+    public void HandlegetDataSanPham(String input, int type) {
         String key = "";
         switch (type) {
             case 1:
                 key = "loaisp";
                 db.collection("SanPham").
-                        whereEqualTo(key, loaisp).
-                        get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        whereEqualTo(key, input).get()
+                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
                             public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
                                 if (queryDocumentSnapshots.size() > 0) {
                                     for (QueryDocumentSnapshot d : queryDocumentSnapshots) {
-
                                         callback.getDataSanPham(d.getId(), d.getString("tensp"),
                                                 d.getLong("giatien"), d.getString("hinhanh"),
                                                 d.getString("loaisp"), d.getString("mota"),
@@ -375,21 +379,24 @@ public class SanPhamModels implements Serializable {
                                 } else {
                                     callback.OnEmptyList();
                                 }
-
                             }
                         });
                 break;
+
             case 2:
-                key = "tensp";
+                key = "loaisp";
+//                String sufInput = input.substring(1);
+//                String fInput = String.valueOf(input.charAt(0));
+//                String res = fInput.toLowerCase() + sufInput;
+//                Log.d("spmodels", "HandlegetDataSanPham: " + res);
 
                 db.collection("SanPham").
-                        whereArrayContains(key, loaisp).
-                        get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        whereEqualTo(key, input).get()
+                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
                             public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
                                 if (queryDocumentSnapshots.size() > 0) {
                                     for (QueryDocumentSnapshot d : queryDocumentSnapshots) {
-
                                         callback.getDataSanPhamNB(d.getId(), d.getString("tensp"),
                                                 d.getLong("giatien"), d.getString("hinhanh"),
                                                 d.getString("loaisp"), d.getString("mota"),
@@ -399,15 +406,15 @@ public class SanPhamModels implements Serializable {
                                 } else {
                                     callback.OnEmptyList();
                                 }
-
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("spmodels", "onFailure: " + e);
                             }
                         });
                 break;
-
         }
-
-
     }
-
-
 }

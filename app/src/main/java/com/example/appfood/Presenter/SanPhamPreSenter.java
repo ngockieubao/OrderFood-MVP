@@ -87,16 +87,20 @@ public class SanPhamPreSenter implements ISanPham {
         callback.OnEmptyList();
     }
 
+//    @Override
+//    public void OnEmptyList(String msg) {
+//        callback.OnEmptyList(msg);
+//    }
+
     // truyen dữ liệu qua màn hình
     @Override
     public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String hansudung, Long type, String trongluong) {
         callback.getDataSanPhamNB(id, tensp, giatien, hinhanh, loaisp, mota, soluong, hansudung, type, trongluong);
     }
 
-    public void HandlegetDataSanPham(String loaisp, int type) {
-        sanPhamModels.HandlegetDataSanPham(loaisp, type);
+    public void HandlegetDataSanPham(String input, int type) {
+        sanPhamModels.HandlegetDataSanPham(input, type);
     }
-
 
     public void HandlegetDataSanPhamNB() {
         sanPhamModels.HandlegetDataSanPhamNoiBat();

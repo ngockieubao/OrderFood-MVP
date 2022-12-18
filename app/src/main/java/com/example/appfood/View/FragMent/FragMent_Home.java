@@ -155,6 +155,11 @@ public class FragMent_Home extends Fragment implements SanPhamView {
 
     }
 
+//    @Override
+//    public void OnEmptyList(String msg) {
+//
+//    }
+
     @Override
     public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String trongluong) {
         arr_sp_nb.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
