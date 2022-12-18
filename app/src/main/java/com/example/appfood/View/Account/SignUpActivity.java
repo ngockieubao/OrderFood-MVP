@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -16,9 +17,10 @@ import com.example.appfood.Presenter.UserView;
 import com.example.appfood.R;
 import com.example.appfood.View.HomeActivity;
 
-public class SignUpActivity extends AppCompatActivity  implements UserView , View.OnClickListener {
+public class SignUpActivity extends AppCompatActivity implements UserView, View.OnClickListener {
     private Button btndangky;
-    private EditText editemail,editpass,editpass_repeat;
+    private EditText editemail, editpass, editpass_repeat;
+    private TextView tv_has_acc;
     private UserPreSenter userPreSenter;
 
     @Override
@@ -32,13 +34,15 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
     private void Init() {
         userPreSenter = new UserPreSenter(this);
         btndangky.setOnClickListener(this);
+        tv_has_acc.setOnClickListener(this);
     }
 
     private void InitWidget() {
         btndangky = findViewById(R.id.btndangky);
-        editemail=findViewById(R.id.editEmail);
+        editemail = findViewById(R.id.editEmail);
         editpass = findViewById(R.id.editmatkhau);
         editpass_repeat = findViewById(R.id.editmatkhau_repeat);
+        tv_has_acc = findViewById(R.id.tv_has_account);
     }
 
     @Override
@@ -82,12 +86,14 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case  R.id.btndangky:
-                String email=editemail.getText().toString();
-                String pass =editpass.getText().toString().trim();
-                String repass =editpass_repeat.getText().toString().trim();
-                userPreSenter.HandleRegist(email,pass,repass);
+        switch (v.getId()) {
+            case R.id.btndangky:
+                String email = editemail.getText().toString();
+                String pass = editpass.getText().toString().trim();
+                String repass = editpass_repeat.getText().toString().trim();
+                userPreSenter.HandleRegist(email, pass, repass);
+            case R.id.tv_has_account:
+                finish();
         }
     }
 }

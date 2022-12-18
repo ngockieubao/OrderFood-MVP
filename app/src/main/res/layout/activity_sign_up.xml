@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back7"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <ImageView
         android:layout_width="100dp"
@@ -14,7 +15,6 @@
         android:src="@drawable/user" />
 
     <androidx.cardview.widget.CardView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -26,9 +26,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border8"
             android:orientation="vertical">
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@android:color/background_light">
 
@@ -44,7 +45,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@android:color/background_light"
                 app:passwordToggleEnabled="true">
@@ -70,7 +71,7 @@
                 <EditText
                     android:id="@+id/editmatkhau_repeat"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/background_light"
                     android:drawableRight="@drawable/ic_baseline_email_24"
                     android:hint="Nhập Lại Mật Khẩu"
@@ -83,7 +84,7 @@
                 android:layout_width="200dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
+                android:layout_marginVertical="8dp"
                 android:background="@drawable/button"
                 android:elevation="8dp"
                 android:text="Đăng Ký" />
@@ -96,11 +97,12 @@
         android:layout_weight="1" />
 
     <TextView
+        android:id="@+id/tv_has_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:padding="5dp"
+        android:padding="8dp"
         android:text="Bạn đã có tài khoản ? Đăng Nhập"
         android:textColor="#E49116"
         android:textSize="16sp" />

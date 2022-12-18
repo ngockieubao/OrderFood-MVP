@@ -3,18 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/red_mix"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp">
 
@@ -27,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:background="@android:color/background_light">
+                android:background="@color/white">
 
                 <EditText
                     android:id="@+id/editEmail"
@@ -40,9 +46,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:background="@android:color/background_light"
+                android:background="@color/white"
                 app:passwordToggleEnabled="true">
 
                 <EditText
@@ -58,12 +64,13 @@
                 android:id="@+id/forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:background="?attr/selectableItemBackground"
                 android:text="Forgot password ?"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btndangnhap"
@@ -87,7 +94,7 @@
                 android:onClick="callRegisterFromLogin"
                 android:text="Đăng ký"
                 android:textColor="@color/black"
-                app:backgroundTint="#F8F8D4" />
+                app:backgroundTint="@color/colorOrange" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -102,8 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
             android:text="@string/admin"
             android:textColor="#008000"
             android:textSize="16sp" />
@@ -111,6 +118,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:src="@drawable/img_footer" />
     </LinearLayout>
 

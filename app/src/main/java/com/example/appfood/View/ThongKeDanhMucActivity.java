@@ -171,5 +171,9 @@ public class ThongKeDanhMucActivity extends AppCompatActivity implements SanPham
 
     @Override
     public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String hansudung, Long type, String trongluong) {
+        arrayList.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, hansudung, type, trongluong));
+        sanPhamAdapter = new SanPhamAdapter(this, arrayList, 1);
+        rCvSP.setLayoutManager(new LinearLayoutManager(this));
+        rCvSP.setAdapter(sanPhamAdapter);
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,8 +14,7 @@
         android:background="@color/purple_200"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -23,16 +23,21 @@
         <ImageView
             android:id="@+id/image_product"
             android:layout_width="150dp"
-            android:layout_height="200dp" />
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:orientation="vertical">
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_product"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-
                 android:id="@+id/txttensp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +56,6 @@
                 tools:text="255,555 đ" />
 
             <TextView
-
                 android:id="@+id/txtthuonghieu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,24 +67,23 @@
 
             <TextView
                 android:id="@+id/txtbaohanh"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="10dp"
                 android:textColor="#4b0082"
                 android:textSize="14sp"
+                android:visibility="gone"
                 tools:text="Bảo hành 12 tháng kể từ khi mua" />
 
             <ImageView
-
                 android:id="@+id/img_thongtin"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/sach"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/text_thongtin"
@@ -88,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 tools:text="Sản phẩm tươi sạch 100%" />
 
             <ImageView
@@ -96,7 +100,8 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="-105dp"
                 android:background="@drawable/momo"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="80dp"
@@ -104,9 +109,8 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="3dp"
                 android:textColor="@color/black"
-
+                android:visibility="gone"
                 tools:text="Thanh toán momo tiện lợi" />
-
 
             <ImageView
                 android:layout_width="50dp"
@@ -114,7 +118,8 @@
                 android:layout_marginStart="155dp"
                 android:layout_marginTop="-105dp"
                 android:background="@drawable/free"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="80dp"
@@ -122,37 +127,34 @@
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="1dp"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 tools:text="Freeship phạm vi 5km" />
         </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="-80dp"
+        android:layout_height="0dp"
         android:layout_weight="1">
 
         <TextView
             android:id="@+id/txtmota"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:padding="5dp"
             android:textColor="#BCBAB7"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:text="@string/mota" />
     </ScrollView>
 
     <Button
         android:id="@+id/btndathang"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="8dp"
         android:background="@drawable/button"
         android:elevation="5dp"
         android:text="Thêm vào giỏ hàng" />
-
 </LinearLayout>

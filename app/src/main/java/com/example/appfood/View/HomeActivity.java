@@ -128,7 +128,7 @@ public class HomeActivity extends AppCompatActivity implements FragMent_Home.Fra
                         startActivity(new Intent(HomeActivity.this, SignInActivity.class));
                         break;
                     case R.id.lienhe:
-                        editsearch.setVisibility(View.GONE);
+//                        editsearch.setVisibility(View.GONE);
                         startActivity(new Intent(HomeActivity.this, ContactActivity.class));
                         break;
                     case R.id.your_bill:
@@ -136,7 +136,7 @@ public class HomeActivity extends AppCompatActivity implements FragMent_Home.Fra
                         fm = new FragMent_Bill();
                         break;
                     case R.id.your_cart:
-                        editsearch.setVisibility(View.GONE);
+//                        editsearch.setVisibility(View.GONE);
                         startActivity(new Intent(HomeActivity.this, CartActivity.class));
                         break;
                     case R.id.your_profile:
@@ -149,7 +149,7 @@ public class HomeActivity extends AppCompatActivity implements FragMent_Home.Fra
                         finish();
                         break;
                     case R.id.danhmuc:
-                        editsearch.setVisibility(View.VISIBLE);
+//                        editsearch.setVisibility(View.VISIBLE);
                         startActivity(new Intent(HomeActivity.this, ThongKeDanhMucActivity.class));
                         break;
                     case R.id.thongtinungdung:
