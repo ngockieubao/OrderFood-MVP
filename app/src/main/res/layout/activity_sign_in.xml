@@ -10,7 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/red_mix"
@@ -77,7 +76,7 @@
                 android:layout_width="200dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/button"
                 android:elevation="8dp"
@@ -115,12 +114,22 @@
             android:textColor="#008000"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/txt_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
+            android:text="Quên mật khẩu? Liên Hệ: 0382320936"
+            android:textColor="#008000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:src="@drawable/img_footer" />
     </LinearLayout>
-
-
 </LinearLayout>

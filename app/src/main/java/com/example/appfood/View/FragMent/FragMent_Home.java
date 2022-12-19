@@ -143,22 +143,16 @@ public class FragMent_Home extends Fragment implements SanPhamView {
     @Override
     public void getDataSanPham(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong,
                                String nhasanxuat, Long type, String trongluong) {
-        arr_sp.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
-        sanPhamAdapter = new SanPhamAdapter(getContext(), arr_sp);
-        rcvSP.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        rcvSP.setAdapter(sanPhamAdapter);
-
+//        arr_sp.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
+//        sanPhamAdapter = new SanPhamAdapter(getContext(), arr_sp);
+//        rcvSP.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+//        rcvSP.setAdapter(sanPhamAdapter);
     }
 
     @Override
     public void OnEmptyList() {
 
     }
-
-//    @Override
-//    public void OnEmptyList(String msg) {
-//
-//    }
 
     @Override
     public void getDataSanPhamNB(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String trongluong) {
@@ -194,10 +188,10 @@ public class FragMent_Home extends Fragment implements SanPhamView {
 
     @Override
     public void getDataSanPhamYT(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String trongluong) {
-        arr_sp_yt.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
-        sanPhamYTAdapter = new SanPhamAdapter(getContext(), arr_sp_yt, 6);
-        rcvSPYT.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        rcvSPYT.setAdapter(sanPhamYTAdapter);
+//        arr_sp_yt.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
+//        sanPhamYTAdapter = new SanPhamAdapter(getContext(), arr_sp_yt, 6);
+//        rcvSPYT.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+//        rcvSPYT.setAdapter(sanPhamYTAdapter);
     }
 
     @Override
@@ -210,9 +204,9 @@ public class FragMent_Home extends Fragment implements SanPhamView {
 
     @Override
     public void getDataSanPhamGY(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String trongluong) {
-        arr_sp_gy.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
-        sanPhamGYAdapter = new SanPhamAdapter(getContext(), arr_sp_gy, 8);
-        rcvSPGY.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        rcvSPGY.setAdapter(sanPhamGYAdapter);
+//        arr_sp_gy.add(new SanPhamModels(id, tensp, giatien, hinhanh, loaisp, mota, soluong, nhasanxuat, type, trongluong));
+//        sanPhamGYAdapter = new SanPhamAdapter(getContext(), arr_sp_gy, 8);
+//        rcvSPGY.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+//        rcvSPGY.setAdapter(sanPhamGYAdapter);
     }
 }

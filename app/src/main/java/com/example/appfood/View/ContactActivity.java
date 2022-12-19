@@ -33,20 +33,20 @@ public class ContactActivity extends AppCompatActivity implements OnMapReadyCall
         toolbar = findViewById(R.id.toolbar);
         txtdiachi = findViewById(R.id.txtdiachi);
         txtsdt = findViewById(R.id.txtsdt);
-        txtnoidung = findViewById(R.id.txtnoidung);
+//        txtnoidung = findViewById(R.id.txtnoidung);
 
         db = FirebaseFirestore.getInstance();
 
-        db.collection("ThongTinCuaHang")
-                .document("jhlqhttLCWtBizbbIzsL").get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(@NonNull DocumentSnapshot documentSnapshot) {
-                        txtdiachi.setText("Địa chỉ : " + documentSnapshot.getString("diachi"));
-                        txtsdt.setText("Liên hệ : " + documentSnapshot.getString("sdt"));
-                        txtnoidung.setText("Nội Dung : " + documentSnapshot.getString("noidung"));
-                    }
-                });
+//        db.collection("ThongTinCuaHang")
+//                .document("ioBK44CW8qPAqeQvVuEg").get()
+//                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onSuccess(@NonNull DocumentSnapshot documentSnapshot) {
+//                        txtdiachi.setText("Địa chỉ : " + documentSnapshot.getString("diachi"));
+//                        txtsdt.setText("Liên hệ : " + documentSnapshot.getString("sdt"));
+//                        txtnoidung.setText("Nội Dung : " + documentSnapshot.getString("noidung"));
+//                    }
+//                });
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Back");

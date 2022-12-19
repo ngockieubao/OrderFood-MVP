@@ -18,4 +18,13 @@
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
+
+    <style name="CornerProductTop">
+        <item name="android:topRightRadius">10dp</item>
+        <item name="android:topLeftRadius">10dp</item>
+    </style>
+
+    <style name="CornerCloseDialog">
+        <item name="cornerRadius">10dp</item>
+    </style>
 </resources>

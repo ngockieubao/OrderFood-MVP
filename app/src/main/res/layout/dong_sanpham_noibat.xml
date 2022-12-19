@@ -5,6 +5,7 @@
     android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    android:background="@drawable/border_product"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -30,9 +31,10 @@
         android:id="@+id/txttensp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginHorizontal="10dp"
         android:maxLines="1"
-        android:padding="6dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="3dp"
         android:singleLine="true"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -42,13 +44,13 @@
         android:id="@+id/txtgiatien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
+        android:layout_gravity="center"
         android:gravity="center"
         android:maxLines="1"
         android:padding="6dp"
         android:singleLine="true"
         android:textColor="#EC0453"
-        android:textSize="16sp"
+        android:textSize="18sp"
         tools:text="255.555 Đ" />
 
     <ImageView
@@ -56,6 +58,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-25dp"
         android:src="@drawable/rating"
+        android:visibility="gone"
         app:tint="#FF9800" />
-
 </LinearLayout>

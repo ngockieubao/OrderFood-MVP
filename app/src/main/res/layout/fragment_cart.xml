@@ -7,14 +7,23 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:background="@color/red_mix" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Giỏ hàng"
+        android:textSize="20sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvBill"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/btnthanhtoan"
-        android:layout_below="@+id/toolbar" />
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp" />
 
     <Button
         android:id="@+id/btnthanhtoan"

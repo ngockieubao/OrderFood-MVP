@@ -31,7 +31,7 @@
         android:text="Liên hệ: 0382320936"
         android:textAllCaps="true"
         android:textColor="#ff0000"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
@@ -40,10 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:padding="5dp"
-        android:text="Địa Chỉ store: Nhổn - Hà Nội"
+        android:text="Địa Chỉ Cửa Hàng: 298 đường Cầu Diễn - Bắc Từ Liêm - Hà Nội"
         android:textAllCaps="true"
         android:textColor="#008000"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -59,18 +59,4 @@
             android:layout_height="match_parent"
             tools:layout="@layout/activity_contact" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txtnoidung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="Địa Chỉ: Hà Nội"
-        android:textAllCaps="true"
-        android:textColor="#A1A09E"
-        android:textSize="14sp"
-        android:textStyle="bold" />
 </LinearLayout>
