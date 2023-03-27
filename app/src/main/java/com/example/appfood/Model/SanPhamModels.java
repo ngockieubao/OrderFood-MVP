@@ -42,7 +42,7 @@ public class SanPhamModels implements Serializable {
         db = FirebaseFirestore.getInstance();
     }
 
-    public SanPhamModels(String id, String id_sp, String tensp, long giatien, String hinhanh, String loaisp, long soluong, String hansudung, long type, String trongluong) {
+        public SanPhamModels(String id, String id_sp, String tensp, long giatien, String hinhanh, String loaisp, long soluong, String hansudung, long type, String trongluong) {
         this.id = id;
         this.tensp = tensp;
         this.giatien = giatien;
